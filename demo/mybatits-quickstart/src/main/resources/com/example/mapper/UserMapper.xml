@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mapper.UserMapper">
+    <!--xml映射规则：复杂的增删改查使用XML配置映射语句-->
+    <!--xml映射文件需要与mapper接口同包同名 -->
+    <!--resultType: 查询返回的记录所封装的类型-->
+    <select id="findAll" resultType="com.example.pojo.User">
+        select * from user
+    </select>
+</mapper>
