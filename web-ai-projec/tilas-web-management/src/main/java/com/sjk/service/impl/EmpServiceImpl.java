@@ -69,6 +69,7 @@ public class EmpServiceImpl implements EmpService {
         return new PageResult<Emp>(p.getTotal(),p.getResult());
     }
 
+
     @Override
     @Transactional
     public void save(Emp emp){

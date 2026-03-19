@@ -13,6 +13,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
+import java.util.Arrays;
+import java.util.List;
 
 /*
 员工管理的controller
@@ -54,4 +56,19 @@ public class EmpController {
         empService.save(emp);
         return Result.success();
     }
+    //员工删除：数组
+//    @DeleteMapping()
+//    public Result delete(Integer[] ids){
+//        log.info("员工删除： {}", Arrays.toString(ids));
+//        empService.delete(ids);
+//        return Result.success();
+//    }
+
+    //员工删除：集合List
+    @DeleteMapping
+        public Result delete(@RequestParam List<Integer> ids){
+        log.info("员工删除： {}", ids);
+        return Result.success();
+    }
+    
 }

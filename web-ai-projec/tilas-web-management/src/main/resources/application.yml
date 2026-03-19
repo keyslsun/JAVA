@@ -22,3 +22,14 @@ mybatis:
 # Deleted:        configuration:
 # Deleted:          log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
+#配置事务管理日志级别
+logging:
+  level:
+    org.springframework.jdbc.support.JdbcTransactionManager: debug
+
+#阿里云OSS
+aliyun:
+    oss:
+        endpoint: oss-cn-beijing.aliyuncs.com
+        bucketName: java-ai010-0407
+        region: cn-beijing
